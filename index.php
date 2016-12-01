@@ -13,7 +13,7 @@
           else {
             echo "did work";
 $sql = "SELECT Id, Name, Genre FROM Games";
-$result = $conn->query($sql);
+$result = $db->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
