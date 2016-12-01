@@ -12,8 +12,17 @@
          if ($db == NULL) echo "did not work";
           else 
             echo "did work";
-$sql = SELECT * FROM `games`;
-$res=$db->query($sql);
-var_dump($res);
+$sql = "SELECT Id, Name, Genre FROM Games";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "Id: " . $row["Id"]. " - Name: " . $row["Name"]. " " . $row["Genre"]. "<br>";
+    }
+} else {
+    echo "0 results";
+}
+$conn->close();
 
           ?>
