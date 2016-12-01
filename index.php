@@ -12,4 +12,8 @@
          if ($db == NULL) echo "did not work";
           else 
             echo "did work";
+$sql = SELECT * FROM `games`;
+$res=$db->query($sql);
+var_dump($res);
+
           ?>
