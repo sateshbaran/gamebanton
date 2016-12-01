@@ -10,7 +10,7 @@
 }
           $db = connectDB();
          if ($db == NULL) echo "did not work";
-          else 
+          else {
             echo "did work";
 $sql = "SELECT Id, Name, Genre FROM Games";
 $result = $conn->query($sql);
@@ -24,5 +24,5 @@ if ($result->num_rows > 0) {
     echo "0 results";
 }
 $conn->close();
-
+          }
           ?>
